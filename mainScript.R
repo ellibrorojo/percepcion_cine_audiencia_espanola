@@ -14,7 +14,7 @@
   source(paste(path,'/getTablaPib.R', sep=""))
   source(paste(path,'/getDiferencia.R', sep=""))
   
-  remove(path)
+  #remove(path)
   
   library(RJSONIO)
   library(rvest)
@@ -70,5 +70,6 @@
   peliculas$TasteInd <- getDiferencia(peliculas$Puntuacion, peliculas$RelPib, referencia)
   peliculas <- orderBy(~TasteInd, peliculas)
 
-
+  write.csv2(peliculas, paste(path, "/tabla.csv", sep=""), quote=FALSE, row.names = FALSE)
+  
   rm(list=setdiff(ls(), c("peliculas", "peliculasSinPuntuacion")))
