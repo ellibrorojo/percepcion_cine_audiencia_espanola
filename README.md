@@ -1,1 +1,1 @@
-Para ejecutar este proyecto es necesario realizar previamente la autenticación en la API de Twitter. Se puede realizar usando el fichero twitterAuth.R y editando las 4 variables.
+Para ejecutar este proyecto es necesario editar las 4 variables al principio de mainscript.R, informándolas con vuestras credenciales de la API de Twitter.
